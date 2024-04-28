@@ -1,7 +1,7 @@
-// import { useContext } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
-// import { FirebaseContext } from "../../FirebaseProvider/FirebaseProvider";
+import { FirebaseContext } from "../../FirebaseProvider/FirebaseProvider";
 
 
 
@@ -9,20 +9,21 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
 
 
-    // const { user, logOut } = useContext(FirebaseContext);
+    const { user, logOut } = useContext(FirebaseContext);
 
-    // const handleSignOUt = () => {
-    //     logOut()
-    //         .then()
-    //         .catch()
-    // }
+    const handleSignOUt = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = <>
 
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/update-profile'}>Update Profile</NavLink></li>
-        <li><NavLink to={'/my-profile'}>My profile</NavLink></li>
-        <li><NavLink to={'/plans'}>Plans</NavLink></li>
+        <li><NavLink to={'/add-tourists-spot'}>Add Tourists Spot</NavLink></li>
+        <li><NavLink to={'/all-tourists-spot'}>All Tourists Spot</NavLink></li>
+        <li><NavLink to={'/my-list'}>My List</NavLink></li>
+       
 
 
     </>
@@ -55,24 +56,24 @@ const NavBar = () => {
                 <div className="navbar-end flex gap-3">
 
                     <div className="w-10 rounded-full">
-                        {/* {user ? (
-                        <span title={user.displayName || "Anonymous"}>
-                            <img className="rounded" alt="profile image" src={user.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
-                        </span>
-                    ) : (
-                        <img className="rounded" alt="existing image" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    )} */}
+                        {user ? (
+                            <span title={user.displayName || "Anonymous"}>
+                                <img className="rounded" alt="profile image" src={user.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                            </span>
+                        ) : (
+                            <img className="rounded" alt="existing image" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        )}
 
-                        <img className="rounded" alt="existing image" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+
                     </div>
 
 
-                    {/* {
-                    user ?
-                        <button onClick={handleSignOUt} className="btn">Sign out </button> :
-                        <Link to="/login" className="btn bg-orange-400 text-white">Sign In</Link>
-                } */}
-                    <Link to="/login" className="btn bg-orange-400 text-white">Sign In</Link>
+                    {
+                        user ?
+                            <button onClick={handleSignOUt} className="btn">Sign out </button> :
+                            <Link to="/login" className="btn bg-orange-400 text-white">Sign In</Link>
+                    }
+
 
                     {/* <a href="#" className="btn bg-green-400 text-white">Register</a> */}
 

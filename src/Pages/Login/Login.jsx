@@ -150,7 +150,7 @@ const Login = () => {
                     </div>
 
 
-                    <p>Dont have an account? Please <Link className="text-red-300" to={"/regerister"}> Register</Link></p>
+                    <p>Dont have an account? Please <Link className="text-red-300" to={"/register"}> Register</Link></p>
                 </div>
 
 
