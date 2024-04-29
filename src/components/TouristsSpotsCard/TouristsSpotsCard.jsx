@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'; 
+import { Link } from 'react-router-dom';
 
 const TouristsSpotsCard = ({ touristsSpot }) => {
     const { image, spotName, countryName, location, avarageCost, visitors } = touristsSpot;
@@ -28,9 +29,9 @@ const TouristsSpotsCard = ({ touristsSpot }) => {
             </div>
 
             <div className="form-control mt-6">
-               <button className="btn btn-primary">view property</button>
+            <Link to={`/property`}><button className="btn btn-primary">view details</button></Link>
             </div>
-            {/* <Link to={`/property/${id}`}></Link> */}
+            
         </div>
         </div>
     );

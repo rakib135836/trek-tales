@@ -19,6 +19,7 @@ import AllTouristsSpot from './Pages/AllTouristsSpot/AllTouristsSpot';
 import AddTouristsSpot from './Pages/AddTouristsSpot/AddTouristsSpot';
 import MyList from './Pages/MyList/MyList';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import SpotsDetails from './Pages/SpotsDetails/SpotsDetails';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       {
         path:"/all-tourists-spot",
         element:<AllTouristsSpot></AllTouristsSpot>,
+        loader:()=>fetch('http://localhost:5000/new-spot'),
       },
       {
         path:"/add-tourists-spot",
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
       {
         path:"/my-list",
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
+      },
+      {
+        path:"/spot-details",
+        element:<PrivateRoute><SpotsDetails></SpotsDetails></PrivateRoute>,
       }
     ]
   },
