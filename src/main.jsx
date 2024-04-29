@@ -21,7 +21,9 @@ import MyList from './Pages/MyList/MyList';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import SpotsDetails from './Pages/SpotsDetails/SpotsDetails';
 
+
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element:<Root></Root> ,
@@ -52,6 +54,7 @@ const router = createBrowserRouter([
       {
         path:"/my-list",
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
+        // loader: () => fetch('http://localhost:5000/spots-by-email'),
       },
       {
         path:"/spot/:_id",

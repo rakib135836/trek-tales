@@ -1,7 +1,12 @@
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FirebaseContext } from '../../FirebaseProvider/FirebaseProvider';
+import { useContext } from 'react';
 
 const AddTouristsSpot = () => {
+
+    const {user}=useContext(FirebaseContext)
 
     const notify = () => toast("data successfully added to database ");
 
@@ -19,8 +24,8 @@ const AddTouristsSpot = () => {
         const seasonality =form.seasonality.value;
         const travelTime =form.travelTime.value;
         const visitors =form.visitors.value;
-        const email =form.email.value;
-        const userName =form.userName.value;
+        const email =user?.email;
+        const userName =user?.displayName;
         
 
         const newTouristSpot={image,spotName,countryName,location,shortDescription,averageCost,seasonality,travelTime,visitors,email,userName};
@@ -155,7 +160,7 @@ const AddTouristsSpot = () => {
                         <div className="label">
                             <span className="label-text">Email</span>
                         </div>
-                        <input type="email" name="email" placeholder="your-email@gmail.com " className="input input-bordered w-full " />
+                        <input type="email" name="email" defaultValue={user?user.email : ""} className=" pointer-events-none input input-bordered w-full " readOnly />
 
                     </label>
 
@@ -167,7 +172,7 @@ const AddTouristsSpot = () => {
                         <div className="label">
                             <span className="label-text">User name</span>
                         </div>
-                        <input type="text" name="userName" placeholder="write down your name " className="input input-bordered w-full " />
+                        <input type="text" name="userName"  defaultValue={user ? user.displayName : ""} className="pointer-events-none input input-bordered w-full "readOnly />
 
                     </label>
 
