@@ -2,10 +2,20 @@
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
+
 const AllSpotCard = ({ spot }) => {
     const { image, spotName, averageCost, visitors, travelTime, seasonality,_id} = spot;
     return (
         <div>
+
+{/* ----------- */}
+
+
+
+
+
+
+
             <div className='flex flex-col p-5 border border-gray-400 border-solid rounded-lg cursor-pointer transition duration-300 ease-out transform hover:shadow-2xl hover:scale-105 my-8'>
                 <div className='flex-grow'>
                     <img src={image} alt="" />

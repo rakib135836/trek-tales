@@ -4,6 +4,7 @@ import Countries from "../../components/Countries/Countries";
 import Slider from "../../components/Slider/Slider";
 import TouristsSpotsSection from "../../components/TouristsSpotsSection/TouristsSpotsSection";
 import TravelTipsSection from "../../components/TravelTipsSection/TravelTipsSection";
+import TypeWriter from "../../components/TypeWriter/TypeWriter";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <div>
             
             <Slider></Slider>
+            <TypeWriter></TypeWriter>
             <h1 className="capitalize font-bold text-3xl text-center my-5">tourists spots </h1>
             <TouristsSpotsSection></TouristsSpotsSection>
             <Countries></Countries>
