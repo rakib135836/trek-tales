@@ -62,7 +62,7 @@ const NavBar = () => {
 
                         </ul>
                     </div>
-                    <h1 className="font-bold text-black text-3xl animate__animated animate__flash">Trek <span className="text-orange-400">Tales</span></h1>
+                    <h1 className="font-bold text-black text-3xl animate__animated animate__flash"> <span className="text-[#f78d79]">Trek</span> <span className="text-[#ad7b9f]">Tales</span></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
