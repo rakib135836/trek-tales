@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDkqBRCcE2TdwTj2sBd7y0jY_mdOS04mXI",
-  authDomain: "trek-tales.firebaseapp.com",
-  projectId: "trek-tales",
-  storageBucket: "trek-tales.appspot.com",
-  messagingSenderId: "516307095001",
-  appId: "1:516307095001:web:09f51926b4fb8ef2c85dc8"
+  apiKey:import.meta.env. VITE_APIKEY,
+  authDomain:import.meta.env. VITE_AUTHDOMAIN,
+  projectId:import.meta.env. VITE_PROJECTID ,
+  storageBucket:import.meta.env. VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env. VITE_MESSAGINGSENDERID,
+  appId:import.meta.env. VITE_APPID 
 };
 
 // Initialize Firebase
