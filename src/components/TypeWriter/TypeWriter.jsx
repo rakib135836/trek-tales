@@ -15,10 +15,10 @@ const TypeWriter = () => {
     <div className='App'>
       <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
         Life is simple{' '}
-        <span style={{ color: 'red', fontWeight: 'bold' }}>
+        <span style={{ color: 'red', fontWeight: 'bold', fontSize: '50px' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
-            words={['Eat', 'Sleep', 'Code', 'Repeat!']}
+            words={['Travel', 'Explore', 'Hunt your Fantasy', 'Repeat!']}
             loop={Infinity}
             cursor
             cursorStyle='_'

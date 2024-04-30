@@ -13,7 +13,9 @@ const Home = () => {
         <div>
             
             <Slider></Slider>
-            <TypeWriter></TypeWriter>
+           <div className="text-center">
+           <TypeWriter></TypeWriter>
+           </div>
             <h1 className="capitalize font-bold text-3xl text-center my-5">tourists spots </h1>
             <TouristsSpotsSection></TouristsSpotsSection>
             <Countries></Countries>

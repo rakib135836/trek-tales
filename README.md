@@ -23,9 +23,9 @@
 
 ## NPM Packages
 
-1. **:** 
-2. **:** 
-3. **:** 
+1. **REACT SIMPLE TYPE WRITER:** 
+2. **REACT AWESOME REVEAL:** 
+
 
 ## Getting Started
 
