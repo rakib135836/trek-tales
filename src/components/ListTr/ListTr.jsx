@@ -1,16 +1,29 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+
 
 const ListTr = ({spot}) => {
     const {spotName,seasonality,travelTime,_id}=spot;
 
-    const notify = () => toast("deleted successfully  ");
-
+    
 
     const handleDelete= _id =>{
         console.log(_id)
+
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            
 
 
         fetch(`http://localhost:5000/new-spot/${_id}`,{
@@ -21,7 +34,14 @@ const ListTr = ({spot}) => {
             console.log(data);
 
             if(data.deletedCount > 0){
-                notify('deleted successfully');
+                // notify('deleted successfully');
+                Swal.fire({
+                  title: "Deleted!",
+                  text: "Your file has been deleted.",
+                  icon: "success"
+                });
+              }
+            });
             }
         })
     }
@@ -54,7 +74,7 @@ const ListTr = ({spot}) => {
             </tbody>
           </table>
 
-          <ToastContainer />
+          
         </div>
     );
 };
