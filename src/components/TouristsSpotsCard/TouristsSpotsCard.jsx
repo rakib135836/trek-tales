@@ -17,12 +17,12 @@ const TouristsSpotsCard = ({ touristsSpot }) => {
                 </div>
 
                 <div>
-                    <h1 className='text-2xl font-bold text-black'>{location}</h1>
+                    <h1 className='text-2xl font-bold text-black'>location:{location}</h1> <br />
                     <hr />
                     <div className='flex flex-row justify-between'>
-                        <p>{averageCost}</p> 
+                        <p> averageCost:{averageCost}</p> 
                         <div className='flex items-center gap-2'>
-                            <p>{visitors}</p>
+                            <p> visitors:{visitors}</p>
 
                         </div>
                     </div>

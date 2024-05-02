@@ -37,7 +37,7 @@ const AllSpotCard = ({ spot }) => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <Link to={`/spot/${_id}`}><button className="btn btn-primary">view property</button></Link>
+                    <Link to={`/spot/${_id}`}><button className="btn btn-primary">view details</button></Link>
                 </div>
             </div>
         </div>

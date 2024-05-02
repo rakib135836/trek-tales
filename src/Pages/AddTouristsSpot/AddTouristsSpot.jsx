@@ -37,7 +37,7 @@ const AddTouristsSpot = () => {
 
         // sending data to the server 
 
-        fetch('http://localhost:5000/new-spot', {
+        fetch('https://trektales-server.vercel.app/new-spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

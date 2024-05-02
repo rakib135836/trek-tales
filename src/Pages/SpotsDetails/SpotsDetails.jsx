@@ -27,26 +27,26 @@ const SpotsDetails = () => {
         <div className="card-body">
 
           <h2 className="card-title">{spot?.spotName}</h2>
-          <p>segment : {spot?.countryName}</p> <br /> <hr />
-          <p className="font-bold"> price:{spot?.location}</p>
+          <p>country name  : {spot?.countryName}</p> <br /> <hr />
+          <p className="font-bold"> location:{spot?.location}</p>
 
-          <span className="font-bold"> </span> <p>{spot?.shortDescription}</p>
+          <span className="font-bold"> </span> <p> description:{spot?.shortDescription}</p>
 
           <div className="flex flex-row ">
-            <p className="font-bold">Tags</p>
-            <p className="text-green-600">#{spot?.averageCost}</p>
-            <p className="text-green-600">#{spot?.travelTime}</p>
+            <p className="font-bold"></p>
+            <p className="text-green-600"># averageCost:{spot?.averageCost}</p>
+            <p className="text-green-600"># travel time:{spot?.travelTime}</p>
           </div><br />
 
           <table>
             <tbody>
               <tr>
-                <td>area:</td>
-                <td className="font-bold">{spot?.seasonality}</td>
+                <td>seasonality</td>
+                <td className="font-bold">seasonality:{spot?.seasonality}</td>
               </tr>
               <tr>
-                <td>location:</td>
-                <td className="font-bold">{spot?.visitors}</td>
+                <td>visitors </td>
+                <td className="font-bold">visitors:{spot?.visitors}</td>
               </tr>
               {/* <tr>
                 <td></td>

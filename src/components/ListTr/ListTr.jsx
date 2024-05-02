@@ -26,7 +26,7 @@ const ListTr = ({spot}) => {
             
 
 
-        fetch(`http://localhost:5000/new-spot/${_id}`,{
+        fetch(`https://trektales-server.vercel.app/new-spot/${_id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

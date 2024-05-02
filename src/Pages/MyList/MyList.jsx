@@ -11,7 +11,7 @@ const MyList = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/spots-by-email/${user?.email}`)
+    fetch(`https://trektales-server.vercel.app/spots-by-email/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setSpots(data);

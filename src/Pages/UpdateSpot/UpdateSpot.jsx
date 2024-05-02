@@ -37,7 +37,7 @@ const UpdateSpot = () => {
 
         // sending data to the server 
 
-        fetch(`http://localhost:5000/new-spot/${_id}`, {
+        fetch(`https://trektales-server.vercel.app/new-spot/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

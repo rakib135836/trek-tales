@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/new-spot'),
+        loader:()=>fetch('https://trektales-server.vercel.app/new-spot'),
       },
       {
         path:"/login",
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path:"/all-tourists-spot",
         element:<AllTouristsSpot></AllTouristsSpot>,
-        loader:()=>fetch('http://localhost:5000/new-spot'),
+        loader:()=>fetch('https://trektales-server.vercel.app/new-spot'),
       },
       {
         path:"/add-tourists-spot",
@@ -60,12 +60,12 @@ const router = createBrowserRouter([
       {
         path:"/spot/:_id",
         element:<PrivateRoute><SpotsDetails></SpotsDetails></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/new-spot'),
+        loader:()=>fetch('https://trektales-server.vercel.app/new-spot'),
       },
       {
         path: "/update-spot/:id",
         element: <PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/new-spot/${params.id}`)
+        loader: ({ params }) => fetch(`https://trektales-server.vercel.app/new-spot/${params.id}`)
     }
     
     ]
